@@ -1,6 +1,6 @@
 # Prova Web
 
-Url de hospedagem: 
+Url de hospedagem: https://prova-web.vercel.app/
 
 GET -> http://localhost:3000/api/petitions/ -> Requisição que traz todas as petições
 
