@@ -111,16 +111,20 @@ module.exports = class Petitions {
           message: `Email inválido`,
         });
       }
-      if(password=="123" && email=="sla1234"){
+      const emailUsuario1 = "sla1234";
+      const passwordUsers = "123"
+      const isValidUser = password==passwordUsers && (email==emailUsuario1)
+      if(!isValidUser){
+        return res.status(401).send({message: `Usuário inválido`});
+        }
         const token = generateToken({
             id: email,
         });
         return res.send({token});
-      }
-    } catch (error) {
+} catch (error) {
       res.status(500).json({ error: error });
     }
-  }
+}
 
   static async removeSign(req, res, next){
     try {

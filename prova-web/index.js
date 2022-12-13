@@ -10,3 +10,5 @@ routes.updatePetitionById(app);
 routes.signPetition(app);
 routes.authUser(app);
 routes.removeSign(app);
+
+module.exports = app;
